@@ -18,6 +18,7 @@ hosted on Heroku free plan (sleeps after 30 mins of inactivity and must sleep 6 
 
 #### Warning
 Dev environment is public (by app_dev.php), secure or ignore this file if your project is for production
+In composer.json, move "sensio/generator-bundle": "~3.0" to "require-dev" section, only for development
 
 #### Heroku configuration
 Heroku linked with github for automatic deployment

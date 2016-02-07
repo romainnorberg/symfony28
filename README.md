@@ -6,6 +6,8 @@ A Symfony project created on February 3, 2016, 8:38 am.
 
 ### installation
 
+``replace "still-ridge-85282" by your heroku app name
+
 - heroku config:set --app still-ridge-85282
 - heroku config:set --app still-ridge-85282 SYMFONY_ENV=prod
 

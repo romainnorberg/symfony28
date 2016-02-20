@@ -1,6 +1,8 @@
 sf28
 ====
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/9e7b7243-a885-469d-b915-a59140a757dc/big.png)](https://insight.sensiolabs.com/projects/9e7b7243-a885-469d-b915-a59140a757dc)
+
 A Symfony 2.8 test project
 
 ### Demo

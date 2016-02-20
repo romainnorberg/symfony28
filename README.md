@@ -11,6 +11,9 @@ Go to https://still-ridge-85282.herokuapp.com/
 #### Hosting
 hosted on Heroku free plan (sleeps after 30 mins of inactivity and must sleep 6 hours in a 24 hour period)
 
+config variables: http://bezhermoso.github.io/2014/08/19/handling-parameters-for-heroku-deploy-in-symfony2/
+sf2.session_name = sf28heroku
+
 ### Installation
 
 ``replace "still-ridge-85282" by your heroku app name

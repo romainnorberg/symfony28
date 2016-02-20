@@ -10,7 +10,6 @@ class AdvertController extends Controller
 {
   public function indexAction($page)
   {
-
     // On ne sait pas combien de pages il y a
     // Mais on sait qu'une page doit être supérieure ou égale à 1
     if ($page < 1) {
@@ -91,7 +90,7 @@ class AdvertController extends Controller
       throw new \Exception('Votre message a été détecté comme spam !');
     }
     */
-   
+
     // La gestion d'un formulaire est particulière, mais l'idée est la suivante :
 
     // Si la requête est en POST, c'est que le visiteur a soumis le formulaire

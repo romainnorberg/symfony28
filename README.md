@@ -12,8 +12,10 @@ Go to https://still-ridge-85282.herokuapp.com/
 hosted on Heroku free plan (sleeps after 30 mins of inactivity and must sleep 6 hours in a 24 hour period)
 
 config variables:
-- http://bezhermoso.github.io/2014/08/19/handling-parameters-for-heroku-deploy-in-symfony2/
-- https://coderwall.com/p/qpitzq/deploing-symfony-project-using-mysql-to-heroku
+
+* http://bezhermoso.github.io/2014/08/19/handling-parameters-for-heroku-deploy-in-symfony2/
+* https://coderwall.com/p/qpitzq/deploing-symfony-project-using-mysql-to-heroku
+
 sf2.session_name = sf28heroku
 
 ### Installation
@@ -40,3 +42,7 @@ If composer detect wrong version of Php, you can run ```composer update --ignore
 
 * http://symfony.com/doc/current/cookbook/deployment/heroku.html
 * https://www.vagrantup.com/docs/synced-folders/nfs.html
+
+### help
+
+* http://blog.insight.sensiolabs.com/2014/12/22/making-symfony-bootable-with-dbal-2-5.html

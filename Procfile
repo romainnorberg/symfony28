@@ -1,1 +1,1 @@
-web: bin/heroku-php-apache2 web/ -C apache_app.conf
+web: bin/heroku-php-apache2 -C apache_app.conf web/

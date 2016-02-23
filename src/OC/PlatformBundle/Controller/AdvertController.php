@@ -2,6 +2,7 @@
 
 namespace OC\PlatformBundle\Controller;
 
+use OC\PlatformBundle\Entity\Advert;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -84,9 +85,47 @@ class AdvertController extends Controller
   {
     // La gestion d'un formulaire est particulière, mais l'idée est la suivante :
 
+$em = $this->getDoctrine()->getManager();
+      $advert2 = $em->getRepository('OCPlatformBundle:Advert')->find('46b46640-d976-11e5-8bcc-080027716959');
+
+      // On modifie cette annonce, en changeant la date à la date d'aujourd'hui
+      $advert2->setDate(new \Datetime());
+
+      // Ici, pas besoin de faire un persist() sur $advert2. En effet, comme on a
+      // récupéré cette annonce via Doctrine, il sait déjà qu'il doit gérer cette
+      // entité. Rappelez-vous, un persist ne sert qu'à donner la responsabilité
+      // de l'objet à Doctrine.
+
+      // Enfin, on applique les deux changements à la base de données :
+      // Un INSERT INTO pour ajouter $advert1
+      // Et un UPDATE pour mettre à jour la date de $advert2
+      $em->flush();
+
+      die('ok');
+
+
+      // Création de l'entité
+      $advert = new Advert();
+      $advert->setTitle('Recherche développeur Symfony2.');
+      $advert->setAuthor('Alexandre');
+      $advert->setContent("Nous recherchons un développeur Symfony2 débutant sur Lyon. Blabla…");
+      // On peut ne pas définir ni la date ni la publication,
+      // car ces attributs sont définis automatiquement dans le constructeur
+
+      // On récupère l'EntityManager
+      $em = $this->getDoctrine()->getManager();
+
+      // Étape 1 : On « persiste » l'entité
+      $em->persist($advert);
+
+      // Étape 2 : On « flush » tout ce qui a été persisté avant
+      $em->flush();
+
+
     // Si la requête est en POST, c'est que le visiteur a soumis le formulaire
     if ($request->isMethod('POST')) {
       // Ici, on s'occupera de la création et de la gestion du formulaire
+
 
       $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
 

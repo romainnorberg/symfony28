@@ -12,4 +12,25 @@ use Doctrine\ORM\EntityRepository;
  */
 class AdvertRepository extends EntityRepository
 {
+  public function myFindAll()
+  {
+    return $this
+    ->createQueryBuilder('a')
+    ->getQuery()
+    ->getResult();
+  }
+
+  public function getAdvertWithApplications()
+  {
+    $qb = $this
+      ->createQueryBuilder('a')
+      ->leftJoin('a.applications', 'app')
+      ->addSelect('app')
+    ;
+
+    return $qb
+      ->getQuery()
+      ->getResult()
+    ;
+  }
 }

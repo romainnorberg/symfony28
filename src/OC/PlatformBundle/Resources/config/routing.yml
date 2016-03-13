@@ -11,8 +11,6 @@ oc_platform_view:
     path:      /advert/{id}
     methods: [ get ]
     defaults:  { _controller: OCPlatformBundle:Advert:view }
-    requirements:
-        id: \d+
 
 oc_platform_add:
     path:      /add
@@ -23,12 +21,8 @@ oc_platform_edit:
     path:      /edit/{id}
     methods: [ get, post ]
     defaults:  { _controller: OCPlatformBundle:Advert:edit }
-    requirements:
-        id: \d+
 
 oc_platform_delete:
     path:      /delete/{id}
     methods: [ get ]
     defaults:  { _controller: OCPlatformBundle:Advert:delete }
-    requirements:
-        id: \d+
